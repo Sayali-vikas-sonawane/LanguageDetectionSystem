@@ -1,0 +1,68 @@
+{% extends "layout1.html" %}
+{% block title %}Register {% endblock %}
+
+{% block body %}
+<form method="POST">
+<div class="col-25">
+      <label for="fname">First Name : </label>
+    </div>
+    <div class="col-75">
+       <input type="text" name="fnamed" id="fname" placeholder="First Name" required>
+    </div>
+     <div class="row">
+  </div>
+    <div class="col-25">
+      <label for="lname">Last Name : </label>
+    </div>
+    <div class="col-75">
+       <input type="text" name="lnamed" id="lname" placeholder="Last Name" required>
+    </div>
+     <div class="row">
+  </div>
+    <div class="col-25">
+      <label for="ct">Contact no : </label>
+    </div>
+    <div class="col-75">
+       <input type="text" name="ctd" id="ct" placeholder="Contact no." required>
+    </div>
+     <div class="row">
+  </div>
+ <div class="col-25">
+      <label for="city">City : </label>
+    </div>
+    <div class="col-75">
+       <input type="text" name="cityd" id="city" placeholder="City" required>
+    </div>
+     <div class="row">
+
+  </div>
+    <div class="col-25">
+      <label for="id">Email : </label>
+    </div>
+    <div class="col-75">
+       <input type="email" name="idd" id="id" placeholder="Email" required>
+    </div>
+     <div class="row">
+  </div>
+            <div class="col-25">
+      <label for="pass">Password : </label>
+    </div>
+    <div class="col-75">
+       <input type="password" name="passd" id="pass" placeholder="Password" required>
+    </div>
+
+     <div class="row">
+<input type="submit" name="submit" value="Register"/>
+  </div>
+
+
+
+
+
+
+
+
+</form>
+
+{% endblock %}
+

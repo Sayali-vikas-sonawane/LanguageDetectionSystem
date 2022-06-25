@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Translate the Language
+{% endblock %}
+
+{% block body%}
+
+<br><br><br>
+<div class="container-fluid">
+<form id="shorturl">
+
+   <div class="form-group row">
+       <div class="col-sm-2">
+            <label>Enter Text :  </label>
+        </div>
+       <div class="col-sm-7">
+                <input type="text" class="form-control" name ="originalurl"  placeholder = 'Enter the Text to Translate'>
+        </div>
+  </div>
+
+</form>
+    <form method = 'POST'>
+        <div class="form-group row">
+       <div class="col-sm-2">
+        <label>  Language to translate : </label>
+    </div>
+       <div class="col-sm-7">
+                <input type="text"  class="form-control" name ="shortener" placeholder = 'Enter the language to Translate' >
+
+    </div>
+        <div class="col-sm-3">
+      <button type="submit" class="btn btn-primary mb-2">Translate</button>
+    </div>
+  </div>
+    </form>
+
+    <form>
+
+   <div class="form-group row">
+       <div class="col-sm-2">
+        <label>Trasnlated Text :  </label>
+    </div>
+       <div class="col-sm-7">
+                <input type="text" class="form-control" name ="originalurl"  value = {{prediction}}>
+
+    </div>
+  </div>
+
+</form>
+
+</div>
+
+</div>
+{% endblock %}
+

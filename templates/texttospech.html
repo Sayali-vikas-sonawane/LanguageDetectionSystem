@@ -1,0 +1,31 @@
+{% extends 'pgLayout.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block body%}
+
+<br><br><br>
+<div class="container-fluid">
+<form method = 'post',id="shorturl">
+
+   <div class="form-group row">
+       <div class="col-sm-2">
+        <label>Enter Text :  </label>
+    </div>
+       <div class="col-sm-7">
+                <input type="text" class="form-control" name ="originalurl"  placeholder = 'Enter the Text in English Language' >
+    </div>
+        <div class="col-sm-3">
+      <button type="submit" class="btn btn-primary mb-2"> Speak</button>
+    </div>
+  </div>
+
+</form>
+
+</div>
+
+</div>
+{% endblock %}
+

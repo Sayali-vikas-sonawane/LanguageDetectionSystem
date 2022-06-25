@@ -1,0 +1,18 @@
+{% extends 'pgLayout.html' %}
+{% block title %}
+Speak Something
+{% endblock %}
+{% block body%}
+<div class="container-fluid">
+<form method = 'post',id="shorturl">
+   <div class="form-group row">
+       <div class="col-sm-7">
+            <button type="submit" class="btn btn-primary mb-2"> Speak</button>
+        </div>
+       <div class="col-sm-3">
+           <label>Speak Text : {{text}}</label>
+       </div>
+   </div>
+</form>
+</div>
+{% endblock %}

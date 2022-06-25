@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+    {% endblock %}
+    </title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+.header h1 {
+  font-size: 20px;
+}
+.topnav {
+   width: fit-content;
+  align-self: center;
+  background-color: #333;
+  margin-left:30%;
+  overflow: hidden;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+.col-75 {
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+.col-25 {
+  float: left;
+  width: 15%;
+  margin-top: 6px;
+}
+.col-25-op {
+  float: left;
+  width: 15%;
+  margin-top: 15px;
+}
+.col-25-hi{
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+.url-show{
+  float: left;
+  width: 60%;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  color: navy;
+  font-weight: bold;
+  font-size: 15px;
+}
+.label1{
+color: Green;
+font-weight: bold;
+font-size: 20px;
+}
+.label2{
+color: blue;
+  font-size: 15px;
+
+}
+label {
+  margin-left:10px;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+}
+input[type=submit] {
+  background-color: pink;
+  color: navy;
+  font-weight: bold;
+  margin-top: 6px;
+  margin-right: 50px;
+  padding: 12px 20px;
+  border: 1px solid #4CAF50;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  color: navy;
+}
+input[type=submit]:hover {
+  background-color: yellow;
+}
+button {
+  background-color: pink;
+  color: navy;
+  font-size: 15px;
+  margin-top: 6px;
+  margin-right: 60px;
+  padding: 12px 20px;
+  border: 1px solid #4CAF50;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+}
+button:hover {
+  background-color: yellow;
+ }
+input[type=url]:focus {
+  border: 3px solid #555;
+}
+.content {
+  margin:30px;
+  background: white;
+}
+.outercontent {
+  padding: 30px;
+  margin-top: 20px;
+  background: white;
+}
+table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+</style>
+</head>
+<body>
+<div class="header">
+    <img src="{{url_for('static', filename='logo.jpg')}}" align="middle" width="100px" height="100" />
+  <p></p>
+</div>
+<div class="topnav">
+    <a href="/detection">Language Detection</a>
+<!--    <a href="/speechtotext">Speech to Text</a>-->
+    <a href="/history" >History</a>
+    <a href="/logout">Logout</a>
+</div>
+<div class="outercontent">
+<div class="content">
+{% block body %}
+{% endblock %}
+</div>
+    </div>
+<div class="footer">
+    <a href="https://in.linkedin.com/"> LinkedIn</a>
+    <a href="https://github.com/login"> Github </a>
+</div>
+</body>
+</html>

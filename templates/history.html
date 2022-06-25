@@ -1,0 +1,20 @@
+{% extends 'pgLayout.html' %}
+{% block title %}
+History
+{% endblock title %}
+{% block body%}
+<label class="label1">Language Detected History</label><br><br>
+<table style="width:100%">
+  <tr>
+    <th><label class="label1">Entered Text</label></th>
+      <th><label class="label1">Detected langauge</label></th>
+  {% for row in data %}
+    <tr>
+      <td><center><label class="label2">{{ row[0]|tojson|safe }}</label></a></center></td>
+      <td><center><label class="label2">{{ row[1] }}</label></a></center></td>
+    </tr>
+{% endfor %}
+
+</table>
+
+{% endblock body%}
